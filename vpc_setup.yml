@@ -118,7 +118,7 @@
 
     - name: Create NAT gateway and allocate EIP
       ec2_vpc_nat_gateway:
-        state: "{{state}"
+        state: "{{state}}"
         subnet_id: "{{pubsub1_out.subnet.id}}"
         wait: yes
         region: "{{region}}"
