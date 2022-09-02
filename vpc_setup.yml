@@ -17,8 +17,8 @@
         state: "{{state}}"
       register: vpc_out
 
-    - debug:
-        var: vpc_out
+#     - debug:
+#         var: vpc_out
 
     - name: Create Public Subnet 1 in Zone 1
       ec2_vpc_subnet:
@@ -93,7 +93,7 @@
       register: privsub3_out
 
     - name: Internet Gateway Setup
-      ecp2_vpc_igw:
+      ec2_vpc_igw:
         vpc_id: "{{vpc_out.vpc.id}}"
         region: "{{region}}"
         state: "{{state}}"
