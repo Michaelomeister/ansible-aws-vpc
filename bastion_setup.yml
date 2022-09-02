@@ -36,7 +36,7 @@
       register: BastionSG_out
 
     - name: Create Bastion host
-      amazon.aws.ec2:
+      ec2:
         key_name: vprofile-key
         region: "{{region}}"
         instance_type: t2.micro
